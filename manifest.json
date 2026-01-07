@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "FullPage Snap",
+    "version": "1.0",
+    "description": "Capture full-page screenshots and edit them.",
+    "permissions": [
+        "activeTab",
+        "scripting",
+        "storage",
+        "downloads",
+        "unlimitedStorage"
+    ],
+    "action": {
+        "default_title": "Snap Full Page"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "icons": {
+        "48": "icon.png"
+    }
+}

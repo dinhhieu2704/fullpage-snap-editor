@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FullPage Snap</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1"
+        rel="stylesheet" />
+    <style>
+        body {
+            width: 300px;
+            margin: 0;
+            padding: 1.5rem;
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+            color: #0f172a;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .icon {
+            width: 32px;
+            height: 32px;
+            background-color: #1313ec;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        h1 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .btn-capture {
+            width: 100%;
+            padding: 0.75rem;
+            background-color: #1313ec;
+            color: white;
+            border: none;
+            border-radius: 0.5rem;
+            font-weight: 500;
+            font-size: 0.875rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            transition: background-color 0.2s;
+        }
+
+        .btn-capture:hover {
+            background-color: #0f0fb9;
+        }
+
+        .btn-capture:disabled {
+            background-color: #94a3b8;
+            cursor: not-allowed;
+        }
+
+        .progress-container {
+            margin-top: 1.5rem;
+            display: none;
+        }
+
+        .progress-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: #64748b;
+        }
+
+        .progress-bar-bg {
+            width: 100%;
+            height: 6px;
+            background-color: #e2e8f0;
+            border-radius: 9999px;
+            overflow: hidden;
+        }
+
+        .progress-bar-fill {
+            height: 100%;
+            background-color: #1313ec;
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        .status-text {
+            text-align: center;
+            margin-top: 1rem;
+            font-size: 0.875rem;
+            color: #64748b;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="icon">
+            <span class="material-symbols-outlined" style="font-size: 20px;">camera_alt</span>
+        </div>
+        <h1>FullPage Snap</h1>
+    </div>
+
+    <button id="btn-start" class="btn-capture">
+        <span class="material-symbols-outlined">center_focus_weak</span>
+        Capture Full Page
+    </button>
+
+    <div id="progress-container" class="progress-container">
+        <div class="progress-header">
+            <span>Capturing...</span>
+            <span id="progress-text">0%</span>
+        </div>
+        <div class="progress-bar-bg">
+            <div id="progress-fill" class="progress-bar-fill"></div>
+        </div>
+        <div class="status-text">
+            Please wait, do not scroll.
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+
+</html>
