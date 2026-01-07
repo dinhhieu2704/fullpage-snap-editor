@@ -11,12 +11,17 @@
         "unlimitedStorage"
     ],
     "action": {
-        "default_title": "Snap Full Page"
+        "default_title": "Snap Full Page",
+        "default_popup": "popup.html",
+        "default_icon": "icon.png"
     },
     "background": {
         "service_worker": "background.js"
     },
     "icons": {
-        "48": "icon.png"
+        "16": "icon.png",
+        "32": "icon.png",
+        "48": "icon.png",
+        "128": "icon.png"
     }
 }
